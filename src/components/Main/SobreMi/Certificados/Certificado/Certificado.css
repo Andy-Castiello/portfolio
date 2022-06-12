@@ -1,0 +1,26 @@
+
+.sobre-mi__certificates__card {
+    background-color: #202020;
+    border: 2px solid #3c3c3c;
+    padding: 2rem;
+    margin: 2rem 0; }
+    .sobre-mi__certificates__card__title {
+    font-size: 2rem;
+    text-shadow: 2px 2px 3px rgba(21, 221, 149, 0.7);
+    font-weight: 500; }
+    .sobre-mi__certificates__card__institution {
+    font-size: 1.4rem;
+    text-shadow: 2px 2px 3px rgba(139, 100, 250, 0.8);
+    margin-top: 1.5rem; }
+    .sobre-mi__certificates__card__date {
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 3px rgba(139, 100, 250, 0.8);
+    margin-top: .8rem; }
+
+@media screen and (max-width:768px) {
+
+    .sobre-mi__certificates__card {
+
+        min-width: 30rem;
+        margin: 2rem ; }
+}

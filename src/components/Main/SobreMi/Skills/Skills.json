@@ -1,0 +1,36 @@
+{
+    "skills":[
+        {
+            "title":"HTML",
+            "level":4
+        },
+        {
+            "title":"CSS",
+            "level":4
+        },
+        {
+            "title":"JavaScript",
+            "level":3
+        },
+        {
+            "title":"Python",
+            "level":2
+        },
+        {
+            "title":"Java",
+            "level":2
+        },
+        {
+            "title":"Django",
+            "level":2
+        },
+        {
+            "title":"Visual Basic",
+            "level":1
+        },
+        {
+            "title":"Terminal Linux",
+            "level":1
+        }
+    ]
+}

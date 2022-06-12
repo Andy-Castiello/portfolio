@@ -1,0 +1,12 @@
+.main{
+
+    margin-left: 15rem;
+}
+
+@media screen and (max-width:768px) {
+    
+    .main{
+
+        margin:auto;
+    }
+}

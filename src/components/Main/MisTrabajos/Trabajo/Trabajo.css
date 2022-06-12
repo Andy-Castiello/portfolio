@@ -1,0 +1,13 @@
+.trabajos__list__trabajo{
+
+    background-color: rgb(52, 109, 90);
+    flex: 1;
+    overflow: hidden;
+}
+.trabajos__list__trabajo__figure{
+
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}

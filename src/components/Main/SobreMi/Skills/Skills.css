@@ -1,0 +1,18 @@
+.sobre-mi__skills {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 6rem;
+    padding: 2rem;
+    gap:10rem;
+    overflow: auto;
+}
+
+@media screen and (max-width:768px) {
+
+    .sobre-mi__skills {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 6rem 0;
+        padding: 5rem;
+    }
+}

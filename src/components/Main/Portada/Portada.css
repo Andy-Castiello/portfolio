@@ -1,0 +1,35 @@
+.portada{
+
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+    justify-content: flex-start;
+    min-height: 100vh; 
+}
+.portada__title{
+
+    margin: auto 7rem;
+    color: #f5f5f5;
+    grid-row: 2/3; 
+}
+.portada__title__h1{
+
+    font-size: 8rem;
+    text-shadow: 10px 10px 7px rgba(21, 221, 149, 0.7);
+    font-weight: 500;
+}
+.portada__title__text{
+
+    font-size: 4.5rem;
+    text-shadow: 7px 7px 5px rgba(21, 221, 149, 0.7);
+}
+.portada__link{
+
+    color: #8b64fa;
+    text-shadow: 5px 5px 4px #8b64fa;
+    font-family: 'Allison', cursive;
+    font-size: 4.5rem;
+    margin: auto;
+    margin-left: 10rem;
+    padding: 2rem;
+    grid-row: 3/4; 
+}

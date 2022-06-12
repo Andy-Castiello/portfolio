@@ -1,0 +1,45 @@
+/*ANIMATIONS*/
+.link-animated:hover {
+    animation-name: link-hover;
+    animation-duration: 2s;
+    animation-fill-mode: forwards; }
+  
+@keyframes link-hover {
+  30% {
+    transform: translate(0.1rem, -0.1rem); }
+  100% {
+    text-shadow: 1px 1px 7px rgba(21, 221, 149, 0.7);
+    transform: translate(0.1rem, -0.1rem); } }
+
+.nav-bar{
+
+    width: 15rem;
+    min-height: 100vh;
+    background-color: #131515;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+}
+@media screen and (max-width:768px) {
+    
+  .nav-bar{
+
+    width: 100vw;
+    height: 7rem;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (max-width:480px) {
+    
+  .nav-bar{
+
+      width: fit-content;
+      height: fit-content;
+      background-color: transparent;
+  }
+
+}

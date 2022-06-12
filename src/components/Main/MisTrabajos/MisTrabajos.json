@@ -1,0 +1,17 @@
+{
+    "trabajos":[
+        {
+            "title":"Dark Brewery",
+            "image":"./images/trabajos/Cerveceria.jpeg"
+            
+        },
+        {
+            "title":"Catalogo",
+            "image":"./images/trabajos/Tienda-ropa.png"
+        },
+        {
+            "title":"Zod-Sec",
+            "image":"./images/trabajos/Zod-sec.png"
+        }
+    ]
+}

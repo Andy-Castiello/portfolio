@@ -1,0 +1,152 @@
+.header__hamburguesa{
+
+    display: none;
+    cursor: pointer;
+}
+@media screen and (max-width:480px) {
+    
+    .header__hamburguesa{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 3rem;
+        width: 10.5rem;
+        height: 10.5rem;
+        
+    }
+    .header__hamburguesa--animate{
+        
+        display: block;
+        position: relative;
+        width: 10.5rem;
+        height: 10.5rem;
+        z-index: 3;
+        animation: hamburguesa-expand 1s ease-in-out .3s 1 forwards;
+        
+    }
+    .header__hamburguesa--back{
+        
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 3rem;
+        width: 100%;
+        height: 10.5rem;
+        border-bottom: .5rem solid #2f3333;
+
+    }
+    .header__hamburguesa--shrink{
+        
+        cursor: pointer;
+        display: block;
+        position: relative;
+        width: 10.5rem;
+        height: 10.5rem;
+        z-index: 3;
+        animation: hamburguesa-expand 1s ease-in-out 1 reverse backwards;
+        
+    }
+    .header__hamburguesa__back{
+
+        border-bottom: .5rem solid whitesmoke;
+        border-left: .5rem solid whitesmoke;
+        width: 3rem;
+        height: 3rem;
+        transform: rotate(45deg);
+        animation: hamburguesa-back__fade .3s ease-in-out 1 reverse backwards;
+        
+    }
+    .header__hamburguesa__line{
+        
+        width: 4.5rem;
+        height: 0.5rem;
+        border-radius: .4rem;
+        background-color: whitesmoke;
+    }  
+    .header__hamburguesa__line--animate{
+        
+        position: absolute;
+        width: 4.5rem;
+        height: 0.5rem;
+        left: 3rem;
+        border-radius: .4rem;
+        background-color: whitesmoke;
+        opacity: 0;
+    }  
+    .header__hamburguesa__line--1{
+        
+        top:3rem;
+        animation: hamburguesa-expand__line--1 .3s linear 1;
+    } 
+    .header__hamburguesa__line--2{
+        
+        top: 5rem;
+        animation: hamburguesa-expand__line--2 .3s linear 1;
+    } 
+    .header__hamburguesa__line--3{
+        
+        bottom:3rem;
+        animation: hamburguesa-expand__line--3 .3s linear 1;
+    } 
+}
+
+@keyframes hamburguesa-expand {
+    
+    0%{
+        border-bottom: .5rem solid whitesmoke;
+        border-top: .5rem solid whitesmoke;
+    }
+    60%{
+        width: 100vh;
+    }
+    100%{
+        width: 100vw;
+        height: 100vh;
+        border-bottom: .5rem solid whitesmoke;
+        border-top: .5rem solid whitesmoke;
+        background-color: #131515;
+    }
+}
+@keyframes hamburguesa-expand__line--1 {
+
+    0%{
+        opacity: 1;
+    }
+    100%{
+        width: 100%;
+        transform: rotate(-180deg) translate(3rem,-7rem);
+        opacity: 1;
+    }
+}
+@keyframes hamburguesa-expand__line--2 {
+
+    0%{
+        opacity: 1;
+    }
+    100%{
+        width: 100%;
+        transform: rotate(180deg) translate(3rem,-5rem);
+        opacity: 1;
+    }
+}
+@keyframes hamburguesa-expand__line--3 {
+
+    0%{
+        opacity: 1;
+    }
+    100%{
+        width: 100%;
+        transform: rotate(180deg) translate(3rem,7rem);
+        opacity: 1;
+    }
+}
+@keyframes hamburguesa-back__fade {
+    
+    100%{
+
+        transform: rotate(45deg) translate(-3rem,3rem);
+        opacity: 0;
+    }
+}
