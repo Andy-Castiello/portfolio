@@ -2,10 +2,14 @@ import {createStore, combineReducers, compose, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 
 import toolbarReducer from './toolbarDucks';
+import mainReducer from './mainDucks';
+import clientWidthReducer from './clientWidthDucks';
 
 const rootReducers = combineReducers({
 
-    toolbar: toolbarReducer
+    toolbar: toolbarReducer,
+    main: mainReducer,
+    clientWidth: clientWidthReducer
 });
 
 export default function generateStore(){

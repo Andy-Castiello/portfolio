@@ -17,3 +17,15 @@
         margin: 3rem 0;
     }
 }
+@media screen and (max-width:480px) {
+  
+    .sobre-mi__certificates {
+        
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1rem auto; 
+        height: 60rem;
+    }
+
+}

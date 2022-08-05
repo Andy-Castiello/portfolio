@@ -12,15 +12,17 @@
     grid-row: 2/3; 
 }
 .portada__title__h1{
-
+    
     font-size: 8rem;
     text-shadow: 10px 10px 7px rgba(21, 221, 149, 0.7);
     font-weight: 500;
+
 }
 .portada__title__text{
 
     font-size: 4.5rem;
     text-shadow: 7px 7px 5px rgba(21, 221, 149, 0.7);
+
 }
 .portada__link{
 
@@ -32,4 +34,6 @@
     margin-left: 10rem;
     padding: 2rem;
     grid-row: 3/4; 
+    cursor: pointer;
+
 }

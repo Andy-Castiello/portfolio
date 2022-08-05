@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     padding: 3rem 1rem;
+    cursor: pointer;
 }
 .nav-bar__logo__letter{
 
@@ -41,6 +42,31 @@
     .nav-bar__logo{
 
         display: none;
+    }
+    .nav-bar__logo--expanded{
+
+        align-items: center;
+        padding-left: 3rem;
+        width: 100%;
+        border-bottom: .5rem solid #2f3333;
+        animation: hamburguesa-item--expanded .3s linear 1;
+    }
+    .nav-bar__logo__link{
+        
+        display: flex;
+        gap: 3rem;
+        color: #878787;
+        font-weight: 500; 
+        cursor: pointer;
+        padding: 2rem 1rem;
+        font-size: 3rem;
+        opacity: 0;
+        animation: toolbar-link-render .3s linear 1 forwards;
+        animation-delay: .3s;
+    }
+    .nav-bar__logo__icon{
+    
+        width: 4rem; 
     }
 
 }

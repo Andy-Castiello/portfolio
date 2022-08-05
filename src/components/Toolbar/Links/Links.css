@@ -12,6 +12,7 @@
     color: #878787;
     font-size: 1.8rem;
     font-weight: 500; 
+    cursor: pointer;
 }
 @media screen and (max-width:768px) {
     
@@ -33,5 +34,30 @@
 
         display: none;
     }
+    .nav-bar__links--expanded{
 
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding-left: 3rem;
+        width: 100%;
+        border-bottom: .5rem solid #2f3333;
+        animation: hamburguesa-item--expanded .3s linear 1;
+    }
+    .nav-bar__links__link{
+        
+        text-align: start;
+        padding: 2rem 1rem;
+        font-size: 3rem;
+        animation: toolbar-link-render .3s linear 1 forwards;
+        opacity: 0;
+    }
+}
+@keyframes toolbar-link-render {
+    
+    100%{
+
+        transform: translateX(4rem);
+        opacity: 1;
+    }
 }

@@ -10,9 +10,21 @@
 @media screen and (max-width:768px) {
 
     .sobre-mi__skills {
-        display: flex;
-        flex-wrap: nowrap;
+        
         margin: 6rem 0;
-        padding: 5rem;
+        padding: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        
+        max-height: 70rem;
+    }
+}
+@media screen and (max-width:480px) {
+
+    .sobre-mi__skills {
+
+        padding: 1rem auto;
+
     }
 }

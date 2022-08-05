@@ -5,7 +5,6 @@
     flex-direction: column;
     color: #f5f5f5;
     padding: 8rem 7rem;  
-    max-width: 150rem;  
     gap: 6rem;
 }
 .contacto__title{
@@ -88,7 +87,25 @@
     animation-fill-mode: forwards; 
     cursor: pointer;
 }
+@media screen and (max-width:768px) {
+    
+    .contacto__form{
 
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        column-gap: 5rem;
+    
+    }
+    .contacto__form__mensaje{
+    
+        flex-grow: 1;        
+    }
+    .contacto__form__submit{
+
+        align-self: flex-end;
+    }
+}
   
 @keyframes contacto-form-submit {
   30% {

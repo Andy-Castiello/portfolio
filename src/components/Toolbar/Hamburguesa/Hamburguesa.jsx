@@ -14,15 +14,6 @@ class Haburguesa extends React.Component{
         super(props);
 
         this.handleClick = this.handleClick.bind(this);
-        this.animationEnd = this.animationEnd.bind(this);
-        window.addEventListener('resize',()=>{
-            if(window.innerWidth>480){
-
-                
-                
-                this.props.setToolbarDisplayAction(GLOBAL.TOOLBAR.NORMAL);
-            }
-        })
     }
     handleClick (){
 
@@ -31,37 +22,34 @@ class Haburguesa extends React.Component{
             case GLOBAL.TOOLBAR.NORMAL:
 
                 this.props.setToolbarDisplayAction(GLOBAL.TOOLBAR.EXPANDING);
-                setTimeout(this.animationEnd, 1300);
                 return;
             case GLOBAL.TOOLBAR.EXPANDED:
               
                 this.props.setToolbarDisplayAction(GLOBAL.TOOLBAR.SHRINKING);
-                setTimeout(this.animationEnd, 1300);
                 return;
             default:
                 return;
         }
             
     }
-    animationEnd(){
+
+    render(){
+
+        if(this.props.clientWidth!=GLOBAL.CLIENTWIDTH.SMALL && this.props.toolbar.display!=GLOBAL.TOOLBAR.NORMAL)setTimeout(()=>{this.props.setToolbarDisplayAction(GLOBAL.TOOLBAR.NORMAL)},0)
+
         switch(this.props.toolbar.display){
 
             case GLOBAL.TOOLBAR.EXPANDING:
               
-                this.props.setToolbarDisplayAction(GLOBAL.TOOLBAR.EXPANDED);
-                return;
+                setTimeout(()=>{if(this.props.clientWidth==GLOBAL.CLIENTWIDTH.SMALL){this.props.setToolbarDisplayAction(GLOBAL.TOOLBAR.EXPANDED)}else{this.props.setToolbarDisplayAction(GLOBAL.TOOLBAR.NORMAL)}},1300);
+                break;
             case GLOBAL.TOOLBAR.SHRINKING:
        
-                this.props.setToolbarDisplayAction(GLOBAL.TOOLBAR.NORMAL);
-                return;
+                setTimeout(()=>{if(this.props.clientWidth==GLOBAL.CLIENTWIDTH.SMALL){this.props.setToolbarDisplayAction(GLOBAL.TOOLBAR.NORMAL)}else{this.props.setToolbarDisplayAction(GLOBAL.TOOLBAR.NORMAL)}},1300);
+                break;
             default:
-                return
+                break;
         }
-        
-    }
-
-    render(){
-
         let containerClass = "";
         let containerStyle = {};
         const linesArray = [];
@@ -106,4 +94,4 @@ class Haburguesa extends React.Component{
     }
 }
 
-export default connect(state=>{return{toolbar:state.toolbar}},{setToolbarDisplayAction})(Haburguesa);
+export default connect(state=>{return{toolbar:state.toolbar,clientWidth:state.clientWidth}},{setToolbarDisplayAction})(Haburguesa);

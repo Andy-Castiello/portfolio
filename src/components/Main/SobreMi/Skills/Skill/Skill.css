@@ -14,7 +14,7 @@
       position: absolute;
       z-index: 1;
       height: 100%;
-      background-color: rgba(21, 221, 149, 0.7);
+      background-color: rgb(21, 221, 149);
       border-radius: .2rem;
       box-shadow: 0px 0px 3px 3px rgba(21, 221, 149, 0.7); }
       .sobre-mi__skills__skill__bar__level--1{

@@ -11,6 +11,77 @@
   100% {
     text-shadow: 1px 1px 7px rgba(21, 221, 149, 0.7);
     transform: translate(0.1rem, -0.1rem); } }
+@keyframes fadeIn {
+  
+      100%{
+    
+        opacity: 1;
+      }
+    }  
+@keyframes left-fadeIn {
+  
+  100%{
+
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+@keyframes top-fadeIn {
+  
+  100%{
+
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+@keyframes right-fadeIn {
+  
+  100%{
+
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+@keyframes fadeOut {
+  
+  100%{
+
+    opacity: 0;
+  }
+}
+@keyframes bottom-fadeOut {
+  
+  100%{
+
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+}
+@keyframes right-fadeOut {
+  
+  100%{
+
+    opacity: 0;
+    transform: translateX(4rem);
+  }
+}
+@keyframes background-onFade {
+
+  80%,100%{
+
+    background-color : rgba(21,21,21,1)
+  }
+  
+}
+@keyframes background-onNormal {
+
+  0%,20%{
+
+    background-color : rgba(21,21,21,1)
+  }
+  
+  
+}
 /*NORMALIZE*/
 *, *::before, *::after {
     margin: 0;
@@ -26,10 +97,10 @@
   body {
     background-color: gray;
     background-image: url("./images/background.webp");
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed; }
-  
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+  }
   a {
     text-decoration: none; }
 

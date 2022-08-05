@@ -27,6 +27,9 @@ class Toolbar extends React.Component{
 
             case GLOBAL.TOOLBAR.EXPANDED:
                 style ={
+                    display:"flex",
+                    flexDirection:"column",
+                    justifyContent:"flex-start",
                     width:"100vw",
                     height:"100vh",
                     backgroundColor:"#131515",
