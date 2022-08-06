@@ -1,7 +1,8 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { backgroundColor, backgroundResize } from "../../../functions";
 import Globals from "../../../Globals";
-import { setMainContentAction } from "../../../redux/mainDucks";
+import { setMainContentAction, setMainDisplayAction } from "../../../redux/mainDucks";
 
 import './Contacto.css';
 
@@ -94,9 +95,19 @@ const Contacto = ()=>{
             animationDelay: "1.5s" 
         })
     }
-    function handleSubmit(){
+    function handleSubmit(e){
 
-        dispatch(setMainContentAction(Globals.MAIN.CONTENT.SUCCESSFORM));
+        e.preventDefault();
+        dispatch(setMainDisplayAction(Globals.MAIN.DISPLAY.FADINGOUT));
+
+        setTimeout(async () => {
+
+            
+            await dispatch(setMainContentAction(Globals.MAIN.CONTENT.SUCCESSFORM));
+            dispatch(setMainDisplayAction(Globals.MAIN.DISPLAY.NORMAL));
+            backgroundColor();
+            backgroundResize();
+        }, 800);
     }
 
     return (
@@ -104,7 +115,7 @@ const Contacto = ()=>{
         <section style={backStyle} id="contacto" className="contacto">
             <h2 style={style[0]} className="contacto__title">Hablemos...</h2>
             <p style={style[1]} className="contacto__text">Si querés realizarme una consulta por un trabajo o despejar cualquier tipo de duda, enviame un mensaje!</p>
-            <form onSubmit={handleSubmit} className="contacto__form">
+            <form onSubmit={e=>handleSubmit(e)} className="contacto__form">
                 <input style={style[2]} placeholder="Nombre" className="contacto__form__nombre contacto__form__text-input" type="text"/>
                 <input style={style[3]} placeholder="E-Mail" className="contacto__form__email contacto__form__text-input" type="text"/>
                 <input style={style[4]} placeholder="Asunto" className="contacto__form__asunto contacto__form__text-input" type="text"/>

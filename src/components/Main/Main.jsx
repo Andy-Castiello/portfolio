@@ -4,12 +4,14 @@ import Portada from "./Portada/Portada";
 import SobreMi from "./SobreMi/SobreMi";
 import MisTrabajos from "./MisTrabajos/MisTrabajos";
 import Contacto from "./Contacto/Contacto";
+import SuccessForm from "./SuccessForm/SuccessForm"
 
 import { useSelector, useDispatch } from 'react-redux';
 import { setClientWidth } from "../../redux/clientWidthDucks";
 import GLOBAL from './../../Globals';
 
 import './Main.css'
+import { backgroundColor } from "../../functions";
 
 const Main = ()=>{
 
@@ -42,25 +44,7 @@ const Main = ()=>{
         }
     });
     React.useEffect(()=>{
-        function backgroundColor(){
 
-            const sobreMi = document.getElementById("sobre-mi");
-            const contacto = document.getElementById("contacto");
-            if(sobreMi && contacto){
-
-
-                let opacity = 1-(sobreMi.getBoundingClientRect().top/window.innerHeight);
-                if(opacity>=1){
-                    
-                    let contOpacity = 1-(contacto.getBoundingClientRect().top/window.innerHeight);
-                    opacity = (sobreMi.getBoundingClientRect().bottom/window.innerHeight)*2;
-                    if(opacity>0){if(contOpacity>0)opacity+=contOpacity;}
-                    else opacity = contOpacity;
-                }
-                if(opacity>1)opacity=1;
-                document.getElementsByClassName("main")[0].style["background-color"] = `rgba(21,21,21,${opacity})`;
-            }
-        }
         window.addEventListener('scroll',backgroundColor);
         backgroundColor();
 
@@ -102,7 +86,7 @@ const Main = ()=>{
     
             <main style={style} className="main">
     
-                                   
+                <SuccessForm />
             </main>
         );
     }
