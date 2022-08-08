@@ -97,8 +97,7 @@ const Contacto = ()=>{
     }
     function handleSubmit(e){
 
-        /* e.preventDefault(); */
-        dispatch(setMainDisplayAction(Globals.MAIN.DISPLAY.FADINGOUT));
+       /*  dispatch(setMainDisplayAction(Globals.MAIN.DISPLAY.FADINGOUT));
 
         setTimeout(async () => {
 
@@ -107,7 +106,7 @@ const Contacto = ()=>{
             dispatch(setMainDisplayAction(Globals.MAIN.DISPLAY.NORMAL));
             backgroundColor();
             backgroundResize();
-        }, 800);
+        }, 800); */
     }
 
     return (
