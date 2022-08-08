@@ -16,22 +16,32 @@ const Certificados = () =>{
         return Certificado(certificado,i);
     })
     let style = {};
+    let styleTitle = {};
 
     if(display == GLOBAL.MAIN.DISPLAY.FADINGOUT){
 
         style = {
 
             animation: "bottom-fadeOut .2s linear .1s forwards"
-        }
+        };
     }else{
 
-        style = {}        
+        styleTitle = {
+
+            animation: `top-fadeIn .4s linear .5s forwards`,
+            transform: "translateY(4rem)",
+            opacity: 0
+        }        
     }
 
     return(
 
         <article style={style} className="sobre-mi__certificates">
-            {certificados}
+            <h3 style={styleTitle} className="sobre-mi__certificates__title">Mis Certificados</h3>
+            <section className="sobre-mi__certificates__list">
+
+                {certificados}
+            </section>
         </article>
     );
 }

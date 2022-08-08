@@ -97,7 +97,7 @@ const Contacto = ()=>{
     }
     function handleSubmit(e){
 
-        e.preventDefault();
+        /* e.preventDefault(); */
         dispatch(setMainDisplayAction(Globals.MAIN.DISPLAY.FADINGOUT));
 
         setTimeout(async () => {
@@ -115,11 +115,11 @@ const Contacto = ()=>{
         <section style={backStyle} id="contacto" className="contacto">
             <h2 style={style[0]} className="contacto__title">Hablemos...</h2>
             <p style={style[1]} className="contacto__text">Si querés realizarme una consulta por un trabajo o despejar cualquier tipo de duda, enviame un mensaje!</p>
-            <form onSubmit={e=>handleSubmit(e)} className="contacto__form">
-                <input style={style[2]} placeholder="Nombre" className="contacto__form__nombre contacto__form__text-input" type="text"/>
-                <input style={style[3]} placeholder="E-Mail" className="contacto__form__email contacto__form__text-input" type="text"/>
-                <input style={style[4]} placeholder="Asunto" className="contacto__form__asunto contacto__form__text-input" type="text"/>
-                <textarea style={style[5]} spellCheck="false" placeholder="Mensaje" className="contacto__form__mensaje contacto__form__text-input"></textarea>
+            <form onSubmit={e=>handleSubmit(e)} action="https://formspree.io/f/mjvzbnbk" method="POST" className="contacto__form">
+                <input required name="nombre" style={style[2]} placeholder="Nombre" className="contacto__form__nombre contacto__form__text-input" type="text"/>
+                <input required name="email" style={style[3]} placeholder="E-Mail" className="contacto__form__email contacto__form__text-input" type="text"/>
+                <input required name="asunto" style={style[4]} placeholder="Asunto" className="contacto__form__asunto contacto__form__text-input" type="text"/>
+                <textarea required name="mensaje" style={style[5]} spellCheck="false" placeholder="Mensaje" className="contacto__form__mensaje contacto__form__text-input"></textarea>
                 <input style={style[6]} className="contacto__form__submit" type="submit" value="Enviar Consulta!"/>
             </form>
         </section>

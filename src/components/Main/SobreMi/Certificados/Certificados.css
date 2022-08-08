@@ -1,15 +1,25 @@
 .sobre-mi__certificates {
     grid-area: 1/2/4/3;
+    padding: 5rem; 
+}
+.sobre-mi__certificates__title{
+
+    font-size: 3rem;
+    text-shadow: 3px 3px 4px rgba(21, 221, 149, 0.7);
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.sobre-mi__certificates__list {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 5rem; 
     overflow: auto;
 }
 
 @media screen and (max-width:768px) {
 
-    .sobre-mi__certificates {
+    .sobre-mi__certificates__list {
         
         flex-direction: row;
         justify-content: flex-start;
@@ -19,7 +29,7 @@
 }
 @media screen and (max-width:480px) {
   
-    .sobre-mi__certificates {
+    .sobre-mi__certificates__list {
         
         flex-direction: column;
         justify-content: flex-start;
