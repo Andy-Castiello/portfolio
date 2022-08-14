@@ -2,39 +2,39 @@
     "skills":[
         {
             "title":"HTML",
-            "level":4
+            "level":80
         },
         {
             "title":"CSS",
-            "level":4
+            "level":80
         },
         {
             "title":"JavaScript",
-            "level":3
+            "level":80
         },
         {
             "title":"React",
-            "level":3
+            "level":70
         },
         {
             "title":"Python",
-            "level":2
+            "level":60
         },
         {
             "title":"Java",
-            "level":2
+            "level":50
         },
         {
             "title":"Django",
-            "level":2
+            "level":60
         },
         {
             "title":"Visual Basic",
-            "level":1
+            "level":30
         },
         {
             "title":"Terminal Linux",
-            "level":1
+            "level":40
         }
     ]
 }

@@ -16,7 +16,7 @@ const Skill = (skill)=>{
 
         style = {
             
-            transition: `width ${20*skill.level}%s 1.4s`,
+            transition: `width ${0.05*skill.level}s 1.4s`,
             width: 0
         }
         
@@ -25,7 +25,7 @@ const Skill = (skill)=>{
         
         style = {
             
-            width: `${20*skill.level}%`
+            width: `${skill.level}%`
         }
     }
   
@@ -51,8 +51,8 @@ const Skill = (skill)=>{
             powerBar.current.style.transition = "width 0s 0s";
         }else{
 
-            powerBar.current.style.width = `${20*skill.level}%`;
-            powerBar.current.style.transition = `width ${skill.level}s 1.4s`;
+            powerBar.current.style.width = `${skill.level}%`;
+            powerBar.current.style.transition = `width ${0.05*skill.level}s 1.4s`;
         } 
     }
     
